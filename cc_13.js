@@ -28,4 +28,11 @@ employeeCard.appendChild(removeButton);
     //Task 2: Test Cases
 createEmployeeCard(`Mary Poppins`, `Umbrella Engineer`);
 createEmployeeCard(`Curious George`, `Banana Specialist`);    
-createEmployeeCard(`The Rock`, `Rock`);
+createEmployeeCard(`The Rock`, `Rock`); 
+
+//Task 3: Converting NodeLists to Arrays for Bulk Updates
+const employeeCards = document.querySelectorAll(`.employeeCard`);
+const employeeCardsArray = Array.from(employeeCards);
+    employeeCardsArray.forEach((card) => {
+        card.style.border = `2px solid black`;
+});
