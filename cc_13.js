@@ -23,6 +23,16 @@ employeeContainer.appendChild(employeeCard);
 employeeCard.appendChild(header);
 employeeCard.appendChild(paragraph);
 employeeCard.appendChild(removeButton);
+
+//Task 4: Implementing Removal of Employee Cards with Event Bubbling
+if (employeeContainer) {
+    employeeContainer.addEventListener(`click`, (event) => {
+        if (event.target.className === `employeeCard`) {
+            console.log(`Button clicked`);
+        }
+        event.stopPropagation();
+    });
+};
 };
 
     //Task 2: Test Cases
@@ -36,3 +46,4 @@ const employeeCardsArray = Array.from(employeeCards);
     employeeCardsArray.forEach((card) => {
         card.style.border = `2px solid black`;
 });
+
