@@ -3,9 +3,9 @@
 //Task 2: Adding Employee Cards Dynamically
 function createEmployeeCard(name, position) {
     const employeeCard = document.createElement('div');
-employeeCard.setAttribute(`class`, `employee-card`);
+employeeCard.setAttribute(`class`, `employee-card`); //created this function to add class to employee card
 
-    const employeeContainer = document.getElementById("employeeContainer");
+    const employeeContainer = document.getElementById("employeeContainer"); //container for employee cards
 
     const header = document.createElement(`h2`);
     header.textContent = name;
@@ -17,7 +17,7 @@ employeeCard.setAttribute(`class`, `employee-card`);
     editButton.textContent = "Edit"; //added this
     
     const removeButton = document.createElement(`button`);
-    removeButton.textContent = `Remove`;
+    removeButton.textContent = `Remove`; //button will appear to remove stuff
     removeButton.addEventListener(`click`, (event) => {
         event.stopPropagation();
         employeeCard.remove();
@@ -28,7 +28,7 @@ employeeCard.setAttribute(`class`, `employee-card`);
     employeeCard.appendChild(editButton);
     employeeCard.appendChild(removeButton);
     employeeContainer.appendChild(employeeCard);
-}
+} //created this function to add class to employee card
  
 //Task 5: Inline Editing of Employee Details
 const editButton = document.createElement("button");
@@ -68,7 +68,7 @@ document.getElementById("employeeContainer").addEventListener("click", (event) =
 });
 
     //Task 2: Test Cases
-createEmployeeCard(`Mary Poppins`, `Umbrella Engineer`);
+createEmployeeCard(`Mary Poppins`, `Umbrella Engineer`); 
 createEmployeeCard(`Curious George`, `Banana Specialist`);    
 createEmployeeCard(`The Rock`, `Rock`); 
 
